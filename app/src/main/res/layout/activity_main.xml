@@ -15,15 +15,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/himelody"
             android:text="로또번호 생성기"
             android:textColor="#FFE67868"
-            android:textSize="28dp" />
+            android:textSize="35dp" />
     </androidx.appcompat.widget.Toolbar>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#AAAAAA"
+        android:background="#80E67868"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <NumberPicker
@@ -40,11 +41,13 @@
         android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:layout_marginStart="20dp"
         android:background="@drawable/btn_background"
+        android:fontFamily="@font/himelody"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="번호 추가하기"
+        android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@id/cleanBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/numPicker" />
@@ -55,16 +58,18 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:background="@drawable/btn_background"
+        android:fontFamily="@font/himelody"
         android:text="초기화"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/addBtn"
         app:layout_constraintTop_toBottomOf="@id/numPicker" />
 
     <LinearLayout
-        android:layout_marginTop="13dp"
         android:id="@+id/numLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,6 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/circle_blue"
+            android:fontFamily="@font/himelody"
             android:gravity="center"
             android:text="1"
             android:textColor="@color/white"
@@ -89,6 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/circle_yellow"
+            android:fontFamily="@font/himelody"
             android:gravity="center"
             android:text="1"
             android:textColor="@color/white"
@@ -102,6 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/circle_yellow"
+            android:fontFamily="@font/himelody"
             android:gravity="center"
             android:text="1"
             android:textColor="@color/white"
@@ -115,6 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/circle_green"
+            android:fontFamily="@font/himelody"
             android:gravity="center"
             android:text="1"
             android:textColor="@color/white"
@@ -128,6 +137,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/circle_red"
+            android:fontFamily="@font/himelody"
             android:gravity="center"
             android:text="1"
             android:textColor="@color/white"
@@ -141,6 +151,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/circle_gray"
+            android:fontFamily="@font/himelody"
             android:gravity="center"
             android:text="1"
             android:textColor="@color/white"
@@ -155,7 +166,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:background="@drawable/btn_background"
+        android:fontFamily="@font/himelody"
         android:text="자동 생성 시작!"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
