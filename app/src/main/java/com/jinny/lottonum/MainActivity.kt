@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.NumberPicker
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import org.w3c.dom.Text
 
@@ -75,10 +76,19 @@ class MainActivity : AppCompatActivity() {
             textView.isVisible = true
             textView.text = numberPicker.value.toString()
 
+            setNumBackground(numberPicker.value,textView)
             pickNumberSet.add(numberPicker.value)
         }
     }
-
+    private fun setNumBackground (number: Int, textView: TextView){
+        when(number){
+            in 1..10 -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_yellow)
+            in 11..20 -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_blue)
+            in 21..30 -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_red)
+            in 31..40 -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_gray)
+            else -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_green)
+        }
+    }
     private fun initRunButton() {
         runBtn.setOnClickListener {
             val list = getRandomNum()
@@ -89,6 +99,7 @@ class MainActivity : AppCompatActivity() {
                 val textView = numTextViewList[index]
                 textView.text = i.toString()
                 textView.isVisible = true
+                setNumBackground(i,textView)
             }
         }
     }
@@ -104,6 +115,7 @@ class MainActivity : AppCompatActivity() {
         }
         numberList.shuffle()
         val newList = pickNumberSet.toList() + numberList.subList(0, 6 - pickNumberSet.size)
-        return newList.sorted() //오름차 순 정렬
+        //return newList.sorted() //오름차 순 정렬
+        return newList
     }
 }
