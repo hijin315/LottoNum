@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
         }
         numberList.shuffle()
         val newList = pickNumberSet.toList() + numberList.subList(0, 6 - pickNumberSet.size)
-        //return newList.sorted() //오름차 순 정렬
-        return newList
+        return newList.sorted() //오름차 순 정렬
+
     }
 }
